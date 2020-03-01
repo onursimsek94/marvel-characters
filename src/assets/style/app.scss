@@ -1,0 +1,40 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+
+body,
+#root {
+  margin: 0;
+  font-family: $font-family !important;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-normal;
+
+  .page-frame {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    width: 80%;
+  }
+
+  .input-label {
+    font-weight: $font-weight-bold;
+  }
+
+  .mrvl-btn {
+    width: 210px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+
+    &.red-btn {
+      color: $mrvl-white;
+      background-color: $mrvl-red;
+
+      &:hover, &:focus, &:active {
+        outline: 0;
+      }
+    }
+  }
+}

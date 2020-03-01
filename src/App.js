@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import CharactersView from './views/CharactersView'
+import CharacterDetailView from './views/CharacterDetailView'
+import Loading from './components/Loading'
 
-function App() {
+function App () {
+  const loading = useSelector(state => state.loading)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      {loading > 0 &&
+      <Loading/>
+      }
+      <Switch>
+        <Route
+          path='/'
+          exact
+          component={CharactersView}
+        />
+
+        <Route
+          path='/character-detail/:characterId'
+          exact
+          component={CharacterDetailView}
+        />
+
+        <Redirect from='*' to='/'/>
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App

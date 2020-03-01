@@ -1,0 +1,21 @@
+.character-detail-view {
+  .character-img {
+    display: block;
+    width: 500px;
+    margin: 0 auto 40px auto;
+  }
+
+  .comics-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  .mrvl-btn {
+    float: right;
+    margin-bottom: 30px;
+  }
+}

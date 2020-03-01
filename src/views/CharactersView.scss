@@ -1,0 +1,14 @@
+@import "../assets/style/variables";
+
+.characters-view {
+  .result-count {
+    display: block;
+    color: $mrvl-gray;
+    margin-bottom: 10px;
+  }
+
+  .characters-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

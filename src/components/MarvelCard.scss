@@ -1,0 +1,41 @@
+@import "../assets/style/variables";
+
+.character-card {
+  position: relative;
+  margin: 5px;
+  width: 180px;
+  color: $mrvl-white;
+  background-color: $mrvl-red;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:after {
+    border-style: solid;
+    border-top-color: transparent;
+    border-width: 12px 12px 0 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+  }
+
+  img {
+    width: 180px;
+    height: 210px;
+  }
+
+  div {
+    margin-top: 5px;
+    width: 180px;
+    height: 145px;
+    word-wrap: break-word;
+    font-weight: $font-weight-bold;
+    color: $mrvl-white;
+    background-color: $mrvl-black;
+
+    span {
+      position: absolute;
+      padding: 20px;
+    }
+  }
+}
