@@ -5,13 +5,15 @@
     margin: 0 auto 40px auto;
   }
 
+  .character-info {
+    div {
+      margin-bottom: 10px;
+    }
+  }
+
   .comics-list {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  div {
-    margin-bottom: 10px;
   }
 
   .mrvl-btn {

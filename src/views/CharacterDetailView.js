@@ -43,14 +43,16 @@ export default function CharacterDetailView () {
         alt={character.name}
       />
 
-      <div>
-        <label className="input-label">CHARACTER: </label>
-        {character.name}
-      </div>
+      <div className="character-info">
+        <div>
+          <label className="input-label">CHARACTER: </label>
+          {character.name}
+        </div>
 
-      <div>
-        <label className="input-label">DESCRIPTION: </label>
-        {character.description}
+        <div>
+          <label className="input-label">DESCRIPTION: </label>
+          {character.description}
+        </div>
       </div>
 
       <div>
